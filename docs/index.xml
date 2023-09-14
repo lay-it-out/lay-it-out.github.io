@@ -3,5 +3,5 @@ please download our artifact from <a href="https://doi.org/10.5281/zenodo.832998
 Then follow the instructions of <code>README.md</code>.</p>
 ]]></content:encoded></item><item><title>Coq Doc</title><link>https://lay-it-out.github.io/docs/coq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lay-it-out.github.io/docs/coq/</guid><description>Our Coq proof artifact is included in the Zenodo package and also hosted on Github.
 A prebuilt documentation is hosted here.</description><content:encoded><![CDATA[<p>Our Coq proof artifact is included in the <a href="https://doi.org/10.5281/zenodo.8329981" target="_blank" rel="noopener">Zenodo</a> package and also hosted on <a href="https://github.com/lay-it-out/LS2NF-theory" target="_blank" rel="noopener">Github</a>.</p>
-<p>A prebuilt documentation is hosted <a href="../../coqdoc/indexpage.html" >here</a>.</p>
+<p>A prebuilt documentation is hosted <a href="../../coqdoc/toc.html" >here</a>.</p>
 ]]></content:encoded></item></channel></rss>
