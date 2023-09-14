@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Getting Started of Lamb</title><link>https://lay-it-out.github.io/docs/getting-started/</link><description>Recent content in Getting Started on Lamb</description><generator>Hugo -- gohugo.io</generator><language>en</language><atom:link href="https://lay-it-out.github.io/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Build</title><link>https://lay-it-out.github.io/docs/getting-started/1_build/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lay-it-out.github.io/docs/getting-started/1_build/</guid><description>We support two ways of building Lamb, if you have installed nix on your machine, we suggest the first option.
+Option 1: Via Nix nix build --no-link Refer to this guide in case you got error messages requesting enable the experimental features of Nix.
+To enter a bash shell that provides an interactive build environment with all dependencies loaded, type:
+nix develop Option 2: Via Docker First, build a Docker image with Nix inside:</description><content:encoded><![CDATA[<p>We support two ways of building Lamb, if you have installed <code>nix</code> on your machine, we suggest the first option.</p>
+<h2>Option 1: Via Nix<span class="absolute -mt-20" id="option-1-via-nix"></span>
+    <a href="#option-1-via-nix" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="code-block relative mt-6 first:mt-0 group/code"><div id="code-block-0"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nix build --no-link</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-0">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<p>Refer to <a href="https://nixos.wiki/wiki/Flakes#Enable_flakes" target="_blank" rel="noopener">this guide</a> in case you got error messages requesting enable the experimental features of Nix.</p>
+<p>To enter a bash shell that provides an interactive build environment with all dependencies loaded, type:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div id="code-block-1"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nix develop</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-1">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<h2>Option 2: Via Docker<span class="absolute -mt-20" id="option-2-via-docker"></span>
+    <a href="#option-2-via-docker" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>First, build a Docker image with Nix inside:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div id="code-block-2"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker build . -t lamb:0.1.0</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-2">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<p>Then, start a container using that image, so that you will be dropped into the Nix development shell:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div id="code-block-3"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -it lamb:0.1.0</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-3">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<p>You should notice that the shell prompt now ends with <code>[lamb-dev]&gt;</code>.</p>
+]]></content:encoded></item><item><title>A Tour of Lamb</title><link>https://lay-it-out.github.io/docs/getting-started/2_tour/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lay-it-out.github.io/docs/getting-started/2_tour/</guid><description>In the Nix development shell, type the following command to run a small example:
+python -m lamb tests/motivating-example.bnf Grammar File The file motivating-example.bnf defines a grammar for a toy imperative language, where a block is defined as a list of statements that are aligned with each other, where each statement is either an empty statement nop or a do-block that recursively takes a block as its body:
+block ::= stmt|&amp;#43;|; stmt ::= &amp;#34;nop&amp;#34; | &amp;#34;do&amp;#34; block; where notation |+| is the alignment version of Kleene plus: stmt|+| stands for a nonempty sequence of statements that are aligned to each other (i.</description><content:encoded><![CDATA[<p>In the Nix development shell, type the following command to run a small example:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div id="code-block-0"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">python -m lamb tests/motivating-example.bnf</span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-0">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<h2>Grammar File<span class="absolute -mt-20" id="grammar-file"></span>
+    <a href="#grammar-file" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The file <code>motivating-example.bnf</code> defines a grammar for a toy imperative language, where a block is defined as a list of statements that are aligned with each other, where each statement is either an empty statement <code>nop</code> or a <code>do</code>-block that recursively takes a block as its body:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><pre><code id="code-block-1">block ::= stmt|&#43;|;
+stmt  ::= &#34;nop&#34; | &#34;do&#34; block;</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-1">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<p>where notation <code>|+|</code> is the alignment version of Kleene plus: <code>stmt|+|</code> stands for a nonempty sequence of statements that are aligned to each other (i.e., with the same column number).</p>
+<h2>Ambiguous Sentence<span class="absolute -mt-20" id="ambiguous-sentence"></span>
+    <a href="#ambiguous-sentence" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This grammar is indeed ambiguous:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><pre><code id="code-block-2">...lines of solving process omitted...
+
+***
+Ambiguous sentence of length 3 found. It shall be listed below.
+***
+
+do
+nop
+nop
+
+***
+Found locally ambiguous variable: &#34;new-var-0&#34;. It corresponds to token(s) [1, 3] in the ambiguous sentence.
+***
+
+NOTE: indexing for tokens in the sentence starts at 1. Spaces in the sentence are denoted as `␣&#39;.
+NEXT STEP: Review all parse trees using the following commands (execute line by line):
+
+show tree new-var-0 0
+show tree new-var-0 1
+
+Type help for other available commands. Command completion available with TAB key.
+
+Now entering REPL...
+
+smt-ambig&gt;</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-2">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<p>We see the shortest ambiguous sentence has a length of 3:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><pre><code id="code-block-3">do
+nop
+nop</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-3">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<h2>Parse Trees<span class="absolute -mt-20" id="parse-trees"></span>
+    <a href="#parse-trees" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>In the REPL, type <code>help</code> to see available commands:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><pre><code id="code-block-4">smt-ambig&gt; help</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-4">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<p>The command <code>show tree A tree-index</code> is used to display the (sub)trees rooted at nonterminal <code>A</code>. As hinted by the output, review the two parse trees of this ambiguous sentence:</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><div id="code-block-5"><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">smt-ambig&gt; show tree new-var-0 <span class="m">0</span>
+</span></span><span class="line"><span class="cl">smt-ambig&gt; show tree new-var-0 <span class="m">1</span></span></span></code></pre></div></div><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-5">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<p>The S-expression form will always be printed to the console; additionally, a figure will be opened (via <code>open</code> for Mac or <code>xdg-open</code> for Linux) if a preview application has been installed on your OS. Note that although the internal solver works on a binary normal form of the grammar, the trees are still in EBNF.</p>
+<p>Try other commands as you wish and exit the REPL via the command <code>exit</code>.</p>
+]]></content:encoded></item><item><title>Usage</title><link>https://lay-it-out.github.io/docs/getting-started/3_usage/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://lay-it-out.github.io/docs/getting-started/3_usage/</guid><description>Command Line Options In the Nix development shell (and project root directory), run python -m lamb -h to see help information. Some frequently used command-line toggles are listed below:
+-c &amp;lt;length&amp;gt;: stop searching for ambiguous sentences after reaching the given length. This is useful if you want to check the bounded unambiguity of a given grammar. -l &amp;lt;length&amp;gt;: start the checking process at the specified length. This assumes that one has already checked that any shorter sentence under this grammar is unambiguous.</description><content:encoded><![CDATA[<h2>Command Line Options<span class="absolute -mt-20" id="command-line-options"></span>
+    <a href="#command-line-options" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>In the Nix development shell (and project root directory), run <code>python -m lamb -h</code> to see help information.
+Some frequently used command-line toggles are listed below:</p>
+<ul>
+<li><code>-c &lt;length&gt;</code>: stop searching for ambiguous sentences after reaching the given length. This is useful if you want to check the bounded unambiguity of a given grammar.</li>
+<li><code>-l &lt;length&gt;</code>: start the checking process at the specified length. This assumes that one has already checked that any shorter sentence under this grammar is unambiguous.</li>
+<li><code>-s</code>: output metrics like running time as well as REPL outputs as machine-readable JSON strings.</li>
+</ul>
+<h2>EBNF Syntax<span class="absolute -mt-20" id="ebnf-syntax"></span>
+    <a href="#ebnf-syntax" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Lamb accepts <code>.bnf</code> files as inputs.
+A formal definition in Antlr can be found <a href="https://github.com/lay-it-out/lamb/blob/main/lamb/ebnf/antlr/LayoutEBNF.g4" target="_blank" rel="noopener">here</a>.</p>
+<p>Informally, a <code>.bnf</code> file consists of many production rules, each has the form</p>
+<div class="code-block relative mt-6 first:mt-0 group/code"><pre><code id="code-block-0">&lt;nonterminal&gt; ::= &lt;expr&gt; ;</code></pre><div class="opacity-0 transition group-hover/code:opacity-100 flex gap-1 absolute m-[11px] right-0 top-0">
+    <button class="code-copy-btn group/copybtn transition-all active:opacity-50 bg-primary-700/5 border border-black/5 text-gray-600 hover:text-gray-900 rounded-md p-1.5 dark:bg-primary-300/10 dark:border-white/10 dark:text-gray-400 dark:hover:text-gray-50" title="Copy code" data-clipboard-target="#code-block-0">
+      <svg class="group-[.copied]/copybtn:hidden pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+      <svg class="hidden group-[.copied]/copybtn:block success-icon pointer-events-none h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+    </button>
+  </div>
+</div>
+<p>The expression is one of the following:</p>
+<ul>
+<li>An identifier representing a nonterminal (e.g., <code>block</code>)</li>
+<li>A quoted string representing a terminal (e.g., <code>&quot;do&quot;</code>)</li>
+<li>A parenthesized expression (to promote priority)</li>
+<li>A sequence of expressions as concatenation</li>
+<li>A postfix expression</li>
+<li>An infix expression</li>
+</ul>
+<p>We include all standard EBNF constructs:</p>
+<ul>
+<li>Postfix <code>+</code> for Kleene plus (occur at least once)</li>
+<li>Postfix <code>*</code> for Kleene star (occur an arbitrary number of times, including zero)</li>
+<li>Postfix <code>?</code> for optional (occur once or none)</li>
+<li>Infix <code>|</code> for alternative (choose either part)</li>
+</ul>
+<p>We support the following layout constraints:</p>
+<ul>
+<li>Infix <code>&lt;&gt;</code> or <code>||</code> for alignment (the first tokens of the two parts have the same column number)</li>
+<li>Infix <code>-&gt;</code> for indentation (the second part has its first token to the right of the first part and a newline in between)</li>
+<li>Postfix <code>|&gt;</code> for offside (any subsequent lines must start from a column that is further to the right of the start token of the first line)</li>
+<li>Postfix <code>|&gt;&gt;</code> for offside align (a variant of the above: subsequent lines can start from the same column as that of the first line)</li>
+<li>Postfix <code>|+|</code> for aligned Kleene plus (a variant of Kleene plus, but each element must be aligned to each other)</li>
+<li>Postfix <code>|*|</code> for aligned Kleene star (a variant of Kleene plus, but each element must be aligned to each other)</li>
+<li>Postfix <code>~</code> for single-line (one-line)</li>
+</ul>
+<p>If needed, check the examples in the <code>tests/</code> folder for a better understanding.</p>
+]]></content:encoded></item></channel></rss>
